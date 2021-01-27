@@ -20,4 +20,5 @@ What's in the image?
 The installation...
 - contains all additional software packages,
 - is configured to use a 1600x1200 display
-- has its network configured (you might need to adjust the IP)
+- has its network configured (with qemu's defaults as docuemnted on
+  https://wiki.qemu.org/Documentation/Networking#Virtual_Network_Devices)
