@@ -4,8 +4,8 @@ Native Oberon 2.3.6
 This directory contains a harddisk image with an installed and configured
 version of ETH's Native Oberon 2.3.6.
 
-Besides the disk image, it also contains a Linux shell script to start
-it in qemu.
+Besides the disk image, it also contains a Linux shell script `start.sh`
+to start Oberon in qemu.
 
 The installation of Native Oberon 2.3.6 in a VM was surprisingly hard.
 In qemu, the `oberon0.dsk` boot diskette boots, but quickly fails with
@@ -33,6 +33,8 @@ The installation...
 - contains all additional software packages,
 - is configured to use a 1280x1024 display,
 - uses Gadgets as default
+- has its network configured (with qemu's defaults as docuemnted on
+  https://wiki.qemu.org/Documentation/Networking#Virtual_Network_Devices)
 
 Setting up additional software
 ------------------------------
@@ -40,6 +42,6 @@ Setting up additional software
 software is to create MS-DOS formatted floppy images, and install the 
 software via those images.
 
-The `create_floppies.sh` script creates images for all the addtional 
-software packages. You can use this script as an example for how to create
-your own images.
+The `create_floppies.sh` script creates images for all the addtional software
+packages, as well as the NE2000 PCI network driver. You can use this script
+as an example for how to create your own images.
