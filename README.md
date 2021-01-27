@@ -1,6 +1,10 @@
 Setting up Native Oberon 2.3.6 on Ubuntu 20.10
 ==============================================
 
+
+Setting up the base system
+--------------------------
+
 Setup is somewhat tricky:
 - In qemu, booting from Oberon0.dsk results in "Boot.Bin checksum bad"
 - VMWare complains about a bad bootblock, terminating the VM.
@@ -25,3 +29,11 @@ vbox-img convert \
 Of course, you then also need to adjust the vbox file accordingly.
 
 Now, you can also run Native Oberon with qemu.
+
+Setting up additional software
+------------------------------
+The easiest way to install addition software is to create MS-DOS
+formatted floppy images, and install the software via those images.
+
+Run the `create_floppies.sh` script to create floppy images, then
+mount them and use the Backup.Tool to copy their content to local disk.
