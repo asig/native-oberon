@@ -7,6 +7,11 @@ make_img() {
 
 mkdir /tmp/floppy
 
+make_img ne2000.img
+sudo mount ne2000.img /tmp/floppy
+sudo cp NetNe* /tmp/floppy
+sudo umount /tmp/floppy
+
 make_img gadgets.img
 sudo mount gadgets.img /tmp/floppy
 sudo cp gadgets.arc /tmp/floppy
